@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./*"]
+    },
+    "module": "CommonJS",
+    "target": "ES2024",
+  },
+  "exclude": ["node_modules"]
+}

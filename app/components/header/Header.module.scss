@@ -1,0 +1,63 @@
+#header{
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 10vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    color: rgba(255, 255, 255, 0.8);
+    mix-blend-mode: difference;
+
+    pointer-events: none;
+
+    z-index: 10;
+
+    #time_section{
+        display: flex;
+        column-gap: 0.5vw;
+        font-size: 0.85vw;
+        margin-left: 5vw;
+        #time_name{
+            font-weight: 500;
+            font-family: "InstrumentSans Medium";
+        }
+    }
+    #menu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 0.5vw;
+        font-size: 0.8vw;
+        margin-right: 5vw;
+        pointer-events: initial;
+        h4{
+            font-weight: normal;
+            font-family: "InstrumentSans Medium";
+        }
+        svg{
+            width: 100px;
+            height: 100px;
+            transition: all 0.25s;
+            rect {
+                fill: rgba(255, 255, 255, 0.8);
+                stroke: rgba(255, 255, 255, 0.8);
+                transition: all 0.25s;
+            }
+        }
+        svg:hover{
+            scale: 0.75;
+            rect:nth-child(1) {
+                transform: translate(47px, -20px) rotate(45deg);
+            }
+            rect:nth-child(2){
+                transform: translate(-20px, 47px) rotate(-45deg);
+            }
+        }
+    }
+}

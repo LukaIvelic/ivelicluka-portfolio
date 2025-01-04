@@ -1,0 +1,33 @@
+#education_segment{
+    color: white;
+    background-color: black;
+    overflow: hidden;
+
+    position: relative;
+    z-index: 0;
+
+    display: grid;
+    grid-template-columns: 18vw repeat(6, 1fr) 18vw;
+    grid-template-rows: repeat(20, 1fr);
+    height: 100vh;
+
+    #notation{
+        grid-row: 4;
+        grid-column: 1;
+        justify-self: flex-end;
+        margin-right: 1vw;
+
+        font-size: 1vw;
+        font-weight: normal;
+        color: white;
+        opacity: 0.6;
+    }
+
+    #showcase{
+        grid-row: 7/18;
+        grid-column: 1/9;
+
+        display: flex;
+        flex-direction: column;
+    }
+}

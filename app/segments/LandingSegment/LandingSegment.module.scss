@@ -1,0 +1,155 @@
+#landing_segment{
+    color: black;
+    background-color: white;
+    overflow: hidden;
+
+    position: relative;
+
+    z-index: 0;
+
+    display: grid;
+    grid-template-columns: 18vw repeat(6, 1fr) 18vw;
+    grid-template-rows: repeat(20, 1fr);
+    height: 100vh;
+
+    #monochrome_image{
+        position: absolute;
+            
+        width: 100vw;
+        height: 100vh;
+
+        animation: fast-throb 0.05s linear infinite;
+        opacity: 0.065;
+    
+        pointer-events: none;
+    
+        z-index: 1;
+
+        @keyframes fast-throb {
+            0% {
+                transform: translate(1%, 0%);
+            }
+    
+            25% {
+                transform: translate(0%, 1%);
+            }
+    
+            50% {
+                transform: translate(-1%, 0%);
+            }
+    
+            75% {
+                transform: translate(0% -1%);
+            }
+    
+            100% {
+                transform: translate(1%, 0%);
+            }
+        }
+    }
+
+    @keyframes appear {
+        from{
+            margin-left: -10vh;
+            filter: blur(50px);
+            opacity: 0;
+        }
+        to{
+            margin-left: 0vh;
+            filter: blur(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes deblur{
+        from{
+            filter: blur(50px);
+            opacity: 0;
+        }
+        to{
+            filter: blur(0);
+            opacity: 1;
+        }
+    }
+
+    #name, #surname, #cs_undergraduate, .showcase, #scroll_indicator {
+        opacity: 0;
+        animation: appear 0.75s ease-out forwards;
+    }
+
+    #name, #surname{
+        text-transform: uppercase;
+        color: white;
+        opacity: 0.9;
+        font-size: 6.25vw;
+        font-weight: normal;
+        font-family: "InstrumentSans Regular";
+    }
+
+    #name{
+        grid-column: 2/3;
+        grid-row: 6;
+        animation-delay: 0.5s;
+    }
+
+    #surname{
+        grid-column: 7/8;
+        grid-row: 8;
+        animation-delay: 0.75s;
+    }
+
+    #cs_undergraduate{
+        grid-column: 4/6;
+        justify-self: center;
+        grid-row: 7;
+        font-size: 1vw;
+        color: #D0D0D0;
+        width: 140%;
+        animation: deblur 0.75s ease-out forwards;
+        animation-delay: 3s;
+    }
+
+    .showcase{
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.5vw;
+        font-size: 1vw;
+
+        h4{
+            color: white;
+            opacity: 0.8;
+            font-weight: normal;
+            font-family: "InstrumentSans Medium";
+        }
+
+        p{
+            color: #D0D0D0;
+            opacity: 0.8;
+        }
+    }
+
+    #showcase_profession{
+        grid-column: 2;
+        grid-row: 11;
+
+        animation-delay: 1s;
+    }
+
+    #showcase_update{
+        grid-column: 7/8;
+        justify-self: flex-end;
+        grid-row: 15;
+        animation-delay: 1.25s;
+    }
+
+    #scroll_indicator{
+        grid-column: 5;
+        grid-row: 19;
+        color: white;
+        // opacity: 0.8;
+        font-size: 0.75vw;
+        font-weight: normal;
+        font-family: "InstrumentSans Medium";
+        animation-delay: 1.5s;
+    }
+}
