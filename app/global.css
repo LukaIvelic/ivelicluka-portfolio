@@ -9,3 +9,30 @@
 next-route-announcer, nextjs-portal {
     display: none;
 }
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    height: 550vh;
+    width: 100%;
+
+    overflow-x: hidden;
+    background-color: white;
+
+    *:hover {
+        cursor: default;
+    }
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+::selection {
+    background-color: white;
+    color: black;
+    transition: all 0.25s;
+}
