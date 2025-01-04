@@ -1,7 +1,6 @@
 'use client';
 
 import LandingSegment from "./segments/LandingSegment/LandingSegment";
-import style from './global.module.scss';
 import Header from "./components/header/Header";
 import AboutSegment from "./segments/AboutSegment/AboutSegment";
 import EducationSegment from "./segments/EducationSegment/EducationSegment";
