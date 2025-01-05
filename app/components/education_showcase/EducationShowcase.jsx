@@ -8,14 +8,6 @@ export default function EducationShowcase({EducationCertificates, UniqueID, Key}
     var educationShowcaseElement = null, educationShowcaseButton = null;
     var hashedId = null;
 
-    const debounce = (func, delay) => {
-        let timer;
-        return (...args) => {
-            clearTimeout(timer);
-            timer = setTimeout(() => func(...args), delay);
-        };
-    };
-
     var handleClick2 = (id) => {
         for(let i=0; i < ecdata.length; i++){
             hashedId = "id_" + hashFunction(i);
@@ -40,11 +32,11 @@ export default function EducationShowcase({EducationCertificates, UniqueID, Key}
     };
 
     return(<>
-        <div className={`${style.education_certificates} ${style.collapsed}`} id={UniqueID} style={{marginTop: `-${1}px`}} onClick={()=>{handleClick2(UniqueID);}}>
+        <div className={`${style.education_certificates} ${style.collapsed}`} id={UniqueID} style={{marginTop: `-${1}px`}}>
             <h4 className={style.name} >{EducationCertificates.ECName}</h4>
             <h4 className={style.type} >{EducationCertificates.ECType}</h4>
             <h4 className={style.timestamp} >{EducationCertificates.ECTimestamp}</h4>
-            <button className={style.expand_button} id={"button_" + UniqueID}>+</button>
+            <button className={style.expand_button} id={"button_" + UniqueID} onClick={()=>{handleClick2(UniqueID);}}>+</button>
             <p className={style.description} >{EducationCertificates.ECDescription}</p>
         </div>
     </>);
