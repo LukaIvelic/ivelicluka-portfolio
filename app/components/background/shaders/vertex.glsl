@@ -104,8 +104,8 @@ void main(){
     float noise=snoise((modulated_position+u_time)*zoom)*consistency;
     v_pattern=noise;
     
-    float density=1.25;
-    v_smooth_pattern=smoothMod(v_pattern*density,.35,.4);
+    float density=1.35;
+    v_smooth_pattern=smoothMod(v_pattern*density,.35,.5);
     
     vec3 black=vec3(0.);
     vec3 blue=vec3(.06,.22,.52);

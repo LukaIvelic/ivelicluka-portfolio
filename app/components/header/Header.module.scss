@@ -61,3 +61,21 @@
         }
     }
 }
+
+#clock_separator{
+    font-weight: 900;
+}
+
+.tick_item{
+    animation: tick 1s infinite alternate;
+    margin-top: -10px;
+}
+
+@keyframes tick{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
