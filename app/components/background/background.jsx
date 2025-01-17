@@ -22,7 +22,7 @@ export default function Background({parentID, onLoad}){
         //Renderer
         const renderer = new THREE.WebGLRenderer({antialias: true});
         renderer.setSize(window.innerWidth, window.innerHeight);
-        renderer.setPixelRatio(1);
+        renderer.setPixelRatio(1.5);
         renderer.autoClear = true;
         renderer.domElement.style.position = "absolute";
         renderer.domElement.style.top = "0";

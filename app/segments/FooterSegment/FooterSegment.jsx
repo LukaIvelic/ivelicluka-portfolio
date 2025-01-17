@@ -41,17 +41,17 @@ export default function FooterSegment(){
             <ul id={style.socials}>
                 <li>
                     <a href="https://www.linkedin.com/in/luka-iveli%C4%87-b55074227/">
-                        LinkedIn <img src="./link.svg" alt="link icon" />
+                        LinkedIn <img src="./link.svg" alt="link icon" width={35} height={35}/>
                     </a>
                 </li>
                 <li>
                     <a href="https://github.com/LukaIvelic">
-                        Github <img src="./link.svg" alt="link icon" />
+                        Github <img src="./link.svg" alt="link icon" width={35} height={35}/>
                     </a>
                 </li>
                 <li>
                     <a href="mailto:ivelicworks@gmail.com">
-                        Mail <img src="./link.svg" alt="link icon" />
+                        Mail <img src="./link.svg" alt="link icon" width={35} height={35}/>
                     </a>
                 </li>
             </ul>

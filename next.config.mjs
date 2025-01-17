@@ -9,6 +9,7 @@ const nextConfig = {
                 },
             },
         },
+        optimizeCss: true,
     },
 };
 
