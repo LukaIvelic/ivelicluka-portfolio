@@ -15,7 +15,6 @@
     *{
         font-size: 1vw;
         font-weight: normal;
-        user-select: none;
     }
 
     .name, .type, .timestamp, .expand_button{
@@ -94,7 +93,6 @@
 
         position: absolute;
         top: calc(1.5vh * 6);
-        user-select: initial;
     }
 
     .description:hover{
