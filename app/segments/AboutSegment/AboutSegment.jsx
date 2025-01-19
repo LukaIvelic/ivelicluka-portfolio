@@ -25,6 +25,7 @@ export default function AboutSegment(){
                         trigger: `#${style.about_segment}`,
                         scrub: 0.15,
                     },
+                    willChange: "transform",
                     delay: 2
                 }
             );
@@ -45,7 +46,8 @@ export default function AboutSegment(){
                 scrollTrigger: {
                     trigger: `#${styleEducationSegment.education_segment}`,
                     scrub: 0.15
-                }
+                },
+                willChange: "transform",
             }
         );
     }, [])
@@ -58,7 +60,7 @@ export default function AboutSegment(){
                 the Zagreb University of Applied Sciences, I like to 
                 design & develop frontend solutions. 
             </p>
-            <h4 id={style.notation_two}>Based in Croatia.</h4>
+            <h4 id={style.notation_two}>Hello from Croatia!</h4>
             <p id={style.paragraph_two} className={style.paragraphs}>
                 I recently picked up WebGL as a hobby. Learning how to 
                 combine mathematical knowledge with a shader language to 

@@ -25,7 +25,8 @@ export default function ExpertiseSegment(){
                     scrollTrigger: {
                         trigger: `#${style.expertise_segment}`,
                         scrub: 0.15,
-                    }
+                    },
+                    willChange: "transform",
                 }
             );
         });
@@ -37,7 +38,7 @@ export default function ExpertiseSegment(){
             <ul id={style.expertise}>
                 <li>/1/ User Experience</li>
                 <li>/2/ Web Development</li>
-                <li>/3/ Graphics Programming</li>
+                <li>/3/ Motion Graphics</li>
                 <li>/4/ Backend Development</li>
                 <li>/5/ .NET Core</li>
             </ul>

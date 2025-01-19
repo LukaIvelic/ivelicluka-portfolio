@@ -16,7 +16,6 @@ export default function FooterSegment(){
             gsap.fromTo(`#${id}`,
                 {
                     y: 150
-                    // y: 0
                 },
                 {
                     y: 0,
@@ -24,6 +23,7 @@ export default function FooterSegment(){
                         trigger: `#${style.footer_segment}`,
                         scrub: 0.15,
                     },
+                    willChange: "transform",
                     delay: 2
                 }
             );

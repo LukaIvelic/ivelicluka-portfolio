@@ -14,6 +14,13 @@ export default function Header(){
             // wheelMultiplier: 0.85
             wheelMultiplier: 1.5
         }));
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
     },[]);
 
     var [time, setTime] = useState(null);
@@ -56,6 +63,8 @@ export default function Header(){
 
         if(menuState === false){
             menu.style.left = "0%";
+            menu.style.borderRadius = "0%";
+            menu.style.width = "100%";
 
             lines.children[0].style.transform = "translate(0px, 0.2vw) rotate(-90deg)";
 
@@ -66,7 +75,9 @@ export default function Header(){
             lenis.stop();
         }else{
             menu.style.left = "100%";
-
+            menu.style.borderRadius = "20%";
+            menu.style.width = "50%";
+            
             lines.children[0].style.transform = "translate(0px, 0px) rotate(0deg)";
 
             document.documentElement.style.overflowX = "hidden";
