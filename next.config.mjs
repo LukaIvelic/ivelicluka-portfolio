@@ -10,6 +10,7 @@ const nextConfig = {
             },
         },
         optimizeCss: true,
+        webpackMemoryOptimizations: true,
     },
     webpack: (config, { isServer }) => {
         if (isServer) {

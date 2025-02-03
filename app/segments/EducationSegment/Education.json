@@ -1,35 +1,41 @@
 [
     {
+        "ECId": "1",
         "ECName": "Zagreb University of Applied Sciences",
         "ECType": "Education",
         "ECTimestamp": "Current",
         "ECDescription": "Pursued a career in Computer Science as a Software Engineer, aiming to develop and engage my creativity through various programming languages and by creating innovative solutions to specific problems."
     },
     {
+        "ECId": "2",
         "ECName": "SheepAI_",
         "ECType": "Certificate",
         "ECTimestamp": "12/14/2024",
         "ECDescription": "Participated in the Microblink & Infobip AI Hackathon as part of a team, where we developed and presented 'FraudCrypt,' a solution leveraging LLMs to detect fraudulent email attempts."
     },
     {
+        "ECId": "3",
         "ECName": "Pontis Devcamp",
         "ECType": "Education",
         "ECTimestamp": "10/03/2024",
         "ECDescription": "Completed a structured learning program in which I had the pleasure of experiencing a real-life working environment while developing a web app with ASP.NET, SQL Server, and Angular."
     },
     {
+        "ECId": "4",
         "ECName": "Pontis: DevOps & CI/CD",
         "ECType": "Education",
         "ECTimestamp": "06/05/2024",
         "ECDescription": "Attended a one-day workshop exploring the principles of DevOps with Microsoft Azure, gaining in-depth insights into its integration, analytics, and collaborative methodologies."
     },
     {
+        "ECId": "5",
         "ECName": ".GET Workshop",
         "ECType": "Certificate",
         "ECTimestamp": "03/24/2024",
         "ECDescription": "Attended the .GET Workshop, where I gained hands-on experience with ASP.NET and C#."
     },
     {
+        "ECId": "6",
         "ECName": "Blueprint Workshop: UI & UX",
         "ECType": "Certificate",
         "ECTimestamp": "01/22/2024",

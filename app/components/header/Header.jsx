@@ -7,31 +7,34 @@ import Lenis from 'lenis';
 import styleAboutSegment from '../../segments/AboutSegment/AboutSegment.module.scss';
 import styleEducationSegment from '../../segments/EducationSegment/EducationSegment.module.scss';
 import styleExpertiseSegment from '../../segments/ExpertiseSegment/ExpertiseSegment.module.scss';
-import styleFooterSegment from '../../segments/FooterSegment/FooterSegment.module.scss';
-
 export default function Header(){
 
     var [lenis, setLenis] = useState(null);
 
     useEffect(()=>{
-        setLenis(
-            new Lenis({
-                autoRaf: true,
-                lerp: 0.075,
-                wheelMultiplier: 1.5
-            })
-        );
+        const lenisInstance = new Lenis({
+            autoRaf: true,
+            lerp: 0.075,
+            wheelMultiplier: 1.5
+        });
+        setLenis(lenisInstance);
+
+        return () => lenisInstance.destroy();
     },[]);
 
     var [time, setTime] = useState(null);
-    setInterval(() => {
-        var date = new Date(Date.now());
-        setTime(
-            <>
-                {date.getHours()}<span className={style.tick_item} id={style.clock_separator}> : </span>{date.getMinutes().toString().padStart(2, '0')}
-            </>
-        );
-    }, 10);
+    useEffect(()=>{
+        let interval = setInterval(() => {
+            var date = new Date(Date.now());
+            setTime(
+                <>
+                    {date.getHours()}<span className={style.tick_item} id={style.clock_separator}> : </span>{date.getMinutes().toString().padStart(2, '0')}
+                </>
+            );
+        }, 1000);
+
+        return () => {clearInterval(interval)}
+    }, []);
 
     var handleMenuChoiceClick = (e) => {
         var statement = e.target.offsetParent.id;
