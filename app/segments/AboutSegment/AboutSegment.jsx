@@ -2,6 +2,7 @@
 
 import style from './AboutSegment.module.scss'
 import styleEducationSegment from '../EducationSegment/EducationSegment.module.scss'
+import styleLandingSegment from '../LandingSegment/LandingSegment.module.scss'
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 import { useEffect } from 'react';
@@ -36,16 +37,33 @@ export default function AboutSegment(){
                 borderRadius: "50%",
                 filter: "blur(50px)",
                 scale: 1,
-                y: 0
+                y: "12vw",
+                height: "20rem"
             },
             {
                 borderRadius: "50%",
                 filter: "blur(50px)",
                 scale: 2,
-                y: -1000,
+                height: "50rem",
+                // y: -1000,
                 scrollTrigger: {
                     trigger: `#${styleEducationSegment.education_segment}`,
                     scrub: 0.15
+                },
+                willChange: "transform",
+            }
+        );
+
+        gsap.fromTo(`#${style.about_segment}`,
+            {
+                y: 0,
+            },
+            {
+                y: -200,
+                scrollTrigger: {
+                    trigger: `#${styleLandingSegment.landing_segment}`,
+                    start: "bottom bottom",
+                    scrub: 0.15,
                 },
                 willChange: "transform",
             }
@@ -54,13 +72,13 @@ export default function AboutSegment(){
 
     return (<>
         <section id={style.about_segment}>
-            <h4 id={style.notation_one}>About</h4>
+            <h1 id={style.notation_one}>About</h1>
             <p id={style.paragraph_one} className={style.paragraphs}>
                 While mastering my skills as a Software Engineer at 
                 the Zagreb University of Applied Sciences, I like to 
                 design & develop frontend solutions. 
             </p>
-            <h4 id={style.notation_two}>Hello from Croatia!</h4>
+            <h1 id={style.notation_two}>Hello from Croatia!</h1>
             <p id={style.paragraph_two} className={style.paragraphs}>
                 I recently picked up WebGL as a hobby. Learning how to 
                 combine mathematical knowledge with a shader language to 

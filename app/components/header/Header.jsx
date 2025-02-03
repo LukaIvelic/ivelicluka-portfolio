@@ -4,23 +4,23 @@ import { useEffect, useState } from 'react';
 import style from './Header.module.scss';
 import Lenis from 'lenis';
 
+import styleAboutSegment from '../../segments/AboutSegment/AboutSegment.module.scss';
+import styleEducationSegment from '../../segments/EducationSegment/EducationSegment.module.scss';
+import styleExpertiseSegment from '../../segments/ExpertiseSegment/ExpertiseSegment.module.scss';
+import styleFooterSegment from '../../segments/FooterSegment/FooterSegment.module.scss';
+
 export default function Header(){
 
     var [lenis, setLenis] = useState(null);
+
     useEffect(()=>{
-        setLenis(new Lenis({
-            autoRaf: true,
-            lerp: 0.075,
-            // wheelMultiplier: 0.85
-            wheelMultiplier: 1.5
-        }));
-
-        function raf(time) {
-            lenis.raf(time);
-            requestAnimationFrame(raf);
-        }
-
-        requestAnimationFrame(raf);
+        setLenis(
+            new Lenis({
+                autoRaf: true,
+                lerp: 0.075,
+                wheelMultiplier: 1.5
+            })
+        );
     },[]);
 
     var [time, setTime] = useState(null);
@@ -33,23 +33,43 @@ export default function Header(){
         );
     }, 10);
 
+    var handleMenuChoiceClick = (e) => {
+        var statement = e.target.offsetParent.id;
+        switch(statement){
+            case style.page_menu_about:
+                handleMenuClick();
+                document.getElementById(styleAboutSegment.about_segment).scrollIntoView({behavior: 'smooth'});
+                break;
+            case style.page_menu_education:
+                handleMenuClick();
+                document.getElementById(styleEducationSegment.education_segment).scrollIntoView({behavior: 'smooth'});
+                break;
+            case style.page_menu_expertise:
+                handleMenuClick();
+                document.getElementById(styleExpertiseSegment.expertise_segment).scrollIntoView({behavior: 'smooth'});
+                break;
+            case style.page_menu_prototypes:
+                break;
+        }
+    };
+
     const menu = <>
         <div id={style.page_menu}>
             <ul>
                 <li id={style.page_menu_about}>
-                    <h1>About</h1>
+                    <h1 onClick={handleMenuChoiceClick}>About</h1>
                     <p>A little about me</p>
                 </li>
                 <li id={style.page_menu_education}>
-                    <h1>Education</h1>
+                    <h1 onClick={handleMenuChoiceClick}>Education</h1>
                     <p>How I'm progressing</p>
                 </li>
                 <li id={style.page_menu_expertise}>
-                    <h1>Expertise</h1>
+                    <h1 onClick={handleMenuChoiceClick}>Expertise</h1>
                     <p>What I excel at</p>
                 </li>
                 <li id={style.page_menu_prototypes}>
-                    <h1>Prototypes</h1>
+                    <h1 onClick={handleMenuChoiceClick}>Prototypes</h1>
                     <p>What I enjoy doing</p>
                 </li>
             </ul>
@@ -85,8 +105,6 @@ export default function Header(){
 
             lenis.start();
         }
-
-        console.log(lenis)
 
         setMenuState(!menuState);
     }

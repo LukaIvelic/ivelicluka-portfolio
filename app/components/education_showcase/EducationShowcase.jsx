@@ -33,9 +33,9 @@ export default function EducationShowcase({EducationCertificates, UniqueID, Key}
 
     return(<>
         <div className={`${style.education_certificates} ${style.collapsed}`} id={UniqueID} style={{marginTop: `-${1}px`}}>
-            <h4 className={style.name} >{EducationCertificates.ECName}</h4>
-            <h4 className={style.type} >{EducationCertificates.ECType}</h4>
-            <h4 className={style.timestamp} >{EducationCertificates.ECTimestamp}</h4>
+            <h1 className={style.name} >{EducationCertificates.ECName}</h1>
+            <h1 className={style.type} >{EducationCertificates.ECType}</h1>
+            <h1 className={style.timestamp} >{EducationCertificates.ECTimestamp}</h1>
             <button className={style.expand_button} id={"button_" + UniqueID} onClick={()=>{handleClick2(UniqueID);}}>+</button>
             <p className={style.description} >{EducationCertificates.ECDescription}</p>
         </div>

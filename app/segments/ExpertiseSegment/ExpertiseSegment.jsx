@@ -34,7 +34,7 @@ export default function ExpertiseSegment(){
 
     return (<>
         <section id={style.expertise_segment}>
-            <h4 id={style.notation}>Expertise</h4>
+            <h1 id={style.notation}>Expertise</h1>
             <ul id={style.expertise}>
                 <li>/1/ User Experience</li>
                 <li>/2/ Web Development</li>

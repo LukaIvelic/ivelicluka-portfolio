@@ -65,7 +65,7 @@ export default function FooterSegment(){
                 <span>Katsushika Hokusai</span>
             </p>
             
-            <h4 id={style.copyright}>&copy; {new Date().getFullYear()}. Luka Ivelić</h4>
+            <h2 id={style.copyright}>&copy; {new Date().getFullYear()}. Luka Ivelić</h2>
         </footer>
     </>);
 }

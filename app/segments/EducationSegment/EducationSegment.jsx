@@ -12,7 +12,7 @@ export default function EducationSegment(){
 
     return (<>
         <section id={style.education_segment}>
-            <h4 id={style.notation}>Education & Certificates</h4>
+            <h1 id={style.notation}>Education & Certificates</h1>
             <section id={style.showcase}>
                 {
                     ecdata.map((ec)=>{

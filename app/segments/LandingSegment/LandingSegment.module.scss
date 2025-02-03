@@ -19,7 +19,7 @@
         height: 100vh;
 
         animation: fast-throb 0.05s linear infinite;
-        opacity: 0.065;
+        opacity: 0.075;
     
         pointer-events: none;
     
@@ -114,9 +114,10 @@
         row-gap: 0.5vw;
         font-size: 1vw;
 
-        h4{
+        h2{
             color: white;
             opacity: 0.8;
+            font-size: 1vw;
             font-weight: normal;
             font-family: "InstrumentSans Medium";
         }
