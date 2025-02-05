@@ -28,7 +28,7 @@ export default function Header(){
             var date = new Date(Date.now());
             setTime(
                 <>
-                    {date.getHours()}<span className={style.tick_item} id={style.clock_separator}> : </span>{date.getMinutes().toString().padStart(2, '0')}
+                    {date.getHours().toString().padStart(2, '0')}<span className={style.tick_item} id={style.clock_separator}> : </span>{date.getMinutes().toString().padStart(2, '0')}
                 </>
             );
         }, 1000);
